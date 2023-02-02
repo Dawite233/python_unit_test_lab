@@ -10,8 +10,13 @@ def discount(item_prices):
     Example: if this function is called with a list of [10, 4, 20] then return 4.
     """
 
-    pass  # todo replace this line with your code 
+   ## Add validation to make sure that list contain ints and list does not contain strings || float
 
+    if len(item_prices) >= 3:
+        item_prices.sort()
+        return item_prices[0]
+    else:
+        return None
 
 if __name__ == '__main__':
     main()
